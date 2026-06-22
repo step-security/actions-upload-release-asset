@@ -2,7 +2,7 @@ import { upload, parseUploadUrl, canonicalName } from "../src/upload-release-ass
 
 test("Upload Release Asset", async () => {
   const uploadUrl =
-    "https://example.com/repos/shogo82148/github-action-test/releases/23245222/assets";
+    "https://example.com/repos/step-security/github-action-test/releases/23245222/assets";
   const uploadReleaseAsset = jest.fn().mockReturnValue({
     data: { browser_download_url: "http://example.com/download" },
   });
@@ -41,7 +41,7 @@ test("Upload Release Asset", async () => {
 
 test("Upload Multiple Files", async () => {
   const uploadUrl =
-    "https://example.com/repos/shogo82148/github-action-test/releases/23245222/assets";
+    "https://example.com/repos/step-security/github-action-test/releases/23245222/assets";
   const uploadReleaseAsset = jest.fn().mockReturnValue({
     data: { browser_download_url: "http://example.com/download" },
   });
@@ -99,7 +99,7 @@ test("Upload Multiple Files", async () => {
 
 test("Guess Content Types", async () => {
   const uploadUrl =
-    "https://example.com/repos/shogo82148/github-action-test/releases/23245222/assets";
+    "https://example.com/repos/step-security/github-action-test/releases/23245222/assets";
   const uploadReleaseAsset = jest.fn().mockReturnValue({
     data: { browser_download_url: "http://example.com/download" },
   });
@@ -157,7 +157,7 @@ test("Guess Content Types", async () => {
 
 test("Guess Content Types", async () => {
   const uploadUrl =
-    "https://example.com/repos/shogo82148/github-action-test/releases/23245222/assets";
+    "https://example.com/repos/step-security/github-action-test/releases/23245222/assets";
   const uploadReleaseAsset = jest.fn().mockReturnValue({
     data: { browser_download_url: "http://example.com/download" },
   });
@@ -215,7 +215,7 @@ test("Guess Content Types", async () => {
 
 test("duplicated file names", async () => {
   const uploadUrl =
-    "https://example.com/repos/shogo82148/github-action-test/releases/23245222/assets";
+    "https://example.com/repos/step-security/github-action-test/releases/23245222/assets";
   const uploadReleaseAsset = jest.fn().mockReturnValue({
     data: { browser_download_url: "http://example.com/download" },
   });
@@ -244,7 +244,7 @@ test("duplicated file names", async () => {
 
 test("uploading files already exists", async () => {
   const uploadUrl =
-    "https://example.com/repos/shogo82148/github-action-test/releases/23245222/assets";
+    "https://example.com/repos/step-security/github-action-test/releases/23245222/assets";
   const uploadReleaseAsset = jest.fn().mockReturnValue({
     data: { browser_download_url: "http://example.com/download" },
   });
@@ -279,7 +279,7 @@ test("uploading files already exists", async () => {
 
 test("overwrite", async () => {
   const uploadUrl =
-    "https://example.com/repos/shogo82148/github-action-test/releases/23245222/assets";
+    "https://example.com/repos/step-security/github-action-test/releases/23245222/assets";
   const uploadReleaseAsset = jest.fn().mockReturnValue({
     data: { browser_download_url: "http://example.com/download" },
   });
@@ -317,9 +317,9 @@ test("overwrite", async () => {
 
 test("parseUploadUrl", () => {
   const release = parseUploadUrl(
-    "https://example.com/repos/shogo82148/github-action-test/releases/23245222/assets",
+    "https://example.com/repos/step-security/github-action-test/releases/23245222/assets",
   );
-  expect(release.owner).toBe("shogo82148");
+  expect(release.owner).toBe("step-security");
   expect(release.repo).toBe("github-action-test");
   expect(release.releaseId).toBe("23245222");
 });

@@ -45,7 +45,7 @@ interface Outputs {
 }
 
 const newGitHubClient = (token: string): http.HttpClient => {
-  return new http.HttpClient("n0-actions-upload-release-asset/v1", [], {
+  return new http.HttpClient("step-security-actions-upload-release-asset/v1", [], {
     headers: {
       Authorization: `Bearer ${token}`,
       Accept: "application/vnd.github+json",
