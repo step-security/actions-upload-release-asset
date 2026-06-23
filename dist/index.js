@@ -148,7 +148,7 @@ const mime = __importStar(__nccwpck_require__(3583));
 const path = __importStar(__nccwpck_require__(1017));
 const url = __importStar(__nccwpck_require__(7310));
 const newGitHubClient = (token) => {
-    return new http.HttpClient("n0-actions-upload-release-asset/v1", [], {
+    return new http.HttpClient("step-security-actions-upload-release-asset/v1", [], {
         headers: {
             Authorization: `Bearer ${token}`,
             Accept: "application/vnd.github+json",
